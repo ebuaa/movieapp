@@ -77,7 +77,7 @@ const MovieDetail = () => {
                 <div className={styles.details}>
                     <h1 className={styles.title}>{movie.title}</h1>
                     <p><strong>Date de sortie :</strong> {movie.release_date}</p>
-                    <p><strong>Note moyenne :</strong> {movie.vote_average}/10</p>
+                    <p><strong>Note moyenne :</strong> {movie.vote_average.toFixed(1)}/10</p>
                     <p><strong>Durée :</strong> {movie.runtime} minutes</p>
                     <p><strong>Résumé :</strong> {movie.overview}</p>
                     
@@ -95,12 +95,17 @@ const MovieDetail = () => {
                 <ul className={styles.castList}>
                     {cast.map((actor) => (
                         <li key={actor.id} className={styles.castItem}>
-                            {actor.profile_path && (
+                            {actor.profile_path ? (
                                 <img 
                                     src={`https://image.tmdb.org/t/p/w200${actor.profile_path}`} 
                                     alt={actor.name}
                                     className={styles.actorPhoto}
                                 />
+                            ) : (
+                                <div className={styles.noPhoto}>
+                                    <span>📷</span>
+                                    <p>Photo non disponible</p>
+                                </div>
                             )}
                             <div>
                                 <h3 className={styles.actorName}>{actor.name}</h3>

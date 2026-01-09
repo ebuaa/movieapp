@@ -1,0 +1,63 @@
+.card {
+  background: #c7c7c7;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.movieTitle {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.movieInfo {
+  font-size: 0.9rem;
+  margin: 0.3rem 0;
+}
+
+.movieInfo span {
+  font-weight: bold;
+  color: #646cff;
+}
+
+.movieOverview {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 0.5rem;
+  flex-grow: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.detailButton {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.detailButton:hover {
+  background-color: #535bf2;
+}

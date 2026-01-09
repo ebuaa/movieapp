@@ -1,15 +1,14 @@
 import { Link } from 'react-router';
+import styles from './MovieCard.module.css';
 
 const MovieCard = ({ movieData }) => {
     return (
-        <li className="card">
+        <li className={styles.card}>
             <img src={`https://image.tmdb.org/t/p/w500${movieData.poster_path}`} alt={movieData.title} />
-            <h2 className="movie-title">{movieData.title}</h2>
-            <p className="movie-info"><span>Release Date:</span> {movieData.release_date}</p>
-            <p className="movie-info"><span>Rating:</span> {movieData.vote_average}</p> 
-            <p className="movie-overview">{movieData.overview}</p>
+            <h2 className={styles.movieTitle}>{movieData.title}</h2>
+            <p className={styles.movieInfo}><span>Rating:</span> {movieData.vote_average.toFixed(1)}</p> 
             <Link to={`/movie/${movieData.id}`}>
-                <button>Voir le détail</button>
+                <button className={styles.detailButton}>Voir le détail</button>
             </Link>
         </li>
     );

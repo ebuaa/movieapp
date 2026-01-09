@@ -2,11 +2,15 @@
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    color: #ffffff;
+}
+
+.backButtonWrapper {
+    margin-bottom: 20px;
 }
 
 .backButton {
     padding: 10px 20px;
-    margin-bottom: 20px;
     background-color: #007bff;
     color: white;
     border: none;
@@ -47,7 +51,7 @@
 }
 
 .details strong {
-    color: #333;
+    color: #ffa500;
 }
 
 .wishlistButton {
@@ -102,6 +106,33 @@
     margin-bottom: 10px;
 }
 
+.noPhoto {
+    width: 150px;
+    height: 225px;
+    background: #1a1a1a;
+    border: 2px dashed #555;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.noPhoto span {
+    font-size: 3rem;
+    opacity: 0.5;
+}
+
+.noPhoto p {
+    font-size: 0.85rem;
+    color: #999;
+    text-align: center;
+    padding: 0 10px;
+    margin: 0;
+}
+
 .actorName {
     font-weight: bold;
     margin-bottom: 5px;
@@ -109,7 +140,7 @@
 
 .characterName {
     font-size: 0.9rem;
-    color: #666;
+    color: #aaa;
 }
 
 .loading,

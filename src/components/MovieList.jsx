@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
+import styles from "./MovieList.module.css";
 
 const MovieList = () => {
     const [movies, setMovies] = useState([]);
@@ -42,24 +43,26 @@ const MovieList = () => {
     }, [searchTerm, movies]);
 
     return (
-        <section>
-            <header>
-                <h1>Popular Movies</h1>
-            </header>
-
+        <section className={styles.container}>
             <div>
-                <div>
+                <div className={styles.buttonsCategory}>
                     <button onClick={() => setCategory("nowPlaying")}>En salle</button>
                     <button onClick={() => setCategory("popular")}>Populaires</button>
                     <button onClick={() => setCategory("topRated")}>Les mieux notés</button>
                     <button onClick={() => setCategory("upcoming")}>Sorties à venir</button>
                 </div>
 
-                <input type="text" placeholder="Rechercher un film..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
+                <input 
+                    type="text" 
+                    placeholder="Rechercher un film..." 
+                    value={searchTerm} 
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className={styles.searchInput}
+                />
             </div>
 
             <div>
-                <ul className="cards">
+                <ul className={styles.cards}>
                     {filteredMovies.map((curMovie) => (
                         <MovieCard key={curMovie.id} movieData={curMovie} />
                     ))}

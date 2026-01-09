@@ -33,7 +33,7 @@ const Navigation = () => {
                         Accueil
                     </Link>
                     <Link to="/wishlist" className={styles.wishlistLink}>
-                        <span>A regarder plus tard</span>
+                        <span>Liste de souhaits</span>
                         {wishlistCount > 0 && (
                             <span className={styles.badge}>{wishlistCount}</span>
                         )}

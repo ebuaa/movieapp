@@ -5,97 +5,12 @@ html, body {
 body {
   background: #2c2c2c;
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2rem;
-  list-style: none;
+  margin: 0;
   padding: 0;
-  margin: 2rem 0;
-}
-
-.card {
-  background: #c7c7c7;
-  border-radius: 8px;
-  padding: 1rem;
-  transition: transform 0.2s;
-  display: flex;
-  flex-direction: column;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
+  text-align: center;
   width: 100%;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-}
-
-.movie-title {
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
-}
-
-.movie-info {
-  font-size: 0.9rem;
-  margin: 0.3rem 0;
-}
-
-.movie-info span {
-  font-weight: bold;
-  color: #646cff;
-}
-
-.movie-overview {
-  font-size: 0.85rem;
-  color: #888;
-  margin-top: 0.5rem;
-  flex-grow: 1;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-}
-
-.read-the-docs {
-  color: #888;
 }

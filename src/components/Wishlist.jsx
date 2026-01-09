@@ -67,10 +67,10 @@ const Wishlist = () => {
                 <button className={styles.backButton}>← Retour à la liste</button>
             </Link>
 
-            <h1>Ma Wishlist</h1>
+            <h1>Ma liste de souhaits</h1>
 
             {wishlistMovies.length === 0 ? (
-                <p className={styles.emptyMessage}>Votre wishlist est vide.</p>
+                <p className={styles.emptyMessage}>Votre liste de souhaits est vide.</p>
             ) : (
                 <>
                     <div className={styles.searchContainer}>
@@ -101,7 +101,7 @@ const Wishlist = () => {
                                         <strong>Date :</strong> {movie.release_date}
                                     </p>
                                     <p className={styles.movieInfo}>
-                                        <strong>Note :</strong> {movie.vote_average}/10
+                                        <strong>Note :</strong> {movie.vote_average.toFixed(1)}/10
                                     </p>
                                     <Link to={`/movie/${movie.id}`}>
                                         <button className={styles.viewButton}>Voir les détails</button>
