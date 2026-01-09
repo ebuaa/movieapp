@@ -98,10 +98,10 @@ const Wishlist = () => {
                                 <div className={styles.cardContent}>
                                     <h2 className={styles.movieTitle}>{movie.title}</h2>
                                     <p className={styles.movieInfo}>
-                                        <strong>Date :</strong> {movie.release_date}
+                                        <strong>Date :</strong> {new Date(movie.release_date).toLocaleDateString("fr-FR")}
                                     </p>
                                     <p className={styles.movieInfo}>
-                                        <strong>Note :</strong> {movie.vote_average.toFixed(1)}/10
+                                        <strong>⭐</strong> {movie.vote_average.toFixed(1)}/10
                                     </p>
                                     <Link to={`/movie/${movie.id}`}>
                                         <button className={styles.viewButton}>Voir les détails</button>

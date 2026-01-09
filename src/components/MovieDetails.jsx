@@ -76,7 +76,7 @@ const MovieDetail = () => {
                 />
                 <div className={styles.details}>
                     <h1 className={styles.title}>{movie.title}</h1>
-                    <p><strong>Date de sortie :</strong> {movie.release_date}</p>
+                    <p><strong>Date de sortie :</strong> {new Date(movie.release_date).toLocaleDateString("fr-FR")}</p>
                     <p><strong>Note moyenne :</strong> {movie.vote_average.toFixed(1)}/10</p>
                     <p><strong>Durée :</strong> {movie.runtime} minutes</p>
                     <p><strong>Résumé :</strong> {movie.overview}</p>
