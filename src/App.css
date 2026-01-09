@@ -33,8 +33,58 @@
   }
 }
 
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
 .card {
-  padding: 2em;
+  background: #c7c7c7;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.movie-title {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.movie-info {
+  font-size: 0.9rem;
+  margin: 0.3rem 0;
+}
+
+.movie-info span {
+  font-weight: bold;
+  color: #646cff;
+}
+
+.movie-overview {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 0.5rem;
+  flex-grow: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .read-the-docs {
